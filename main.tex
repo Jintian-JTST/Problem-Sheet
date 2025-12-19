@@ -1,0 +1,118 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{physics}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{mhchem}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{csquotes}
+
+% Siunitx settings
+\sisetup{locale=DE}
+\sisetup{per-mode = symbol-or-fraction}
+\DeclareSIUnit\year{a}
+\DeclareSIUnit\clight{c}
+
+% Box style
+\mdfdefinestyle{exercise}{
+    backgroundcolor=black!10,roundcorner=8pt,hidealllines=true,nobreak
+}
+
+\newcommand{\se}{\subseteq}
+
+\begin{document}
+\pagestyle{fancy}
+
+\lhead{CP3 Vectors and Matrices}
+\rhead{Problem Sheet 1}
+
+\begin{enumerate}
+    \setcounter{enumi}{4}
+    \item \textbf{Sub-Vector Space}
+    \begin{mdframed}[style=exercise]
+    Consider a real vector space $V$ and two sub vector spaces $U$ and $W$ of $V$. i.e. $V\in\mathbb{R}^3$, $U\se V$, $W\se V$.
+
+    (a) Show $ (U \cap W) \se V$. 
+    
+    (b) Show $(U+W)\se V$.
+
+    (c) The dimensions of the above vector spaces are related by $\dim(U + W) =\dim(U) + \dim(W) - \dim(U \cap W)$. Verify this formula for the specific example where $V = \mathbb{R}^3$, $U$ is spanned by $\textbf{u}_1 = \textbf{i} + 2\textbf{j}$, $\textbf{u}_2 = \textbf{k}$ and $W$ is spanned by $\textbf{w}_1 = \textbf{j} + \textbf{k}$, $\textbf{w}_2 = -\textbf{i} + 2\textbf{j}$.
+
+    (d) Prove the dimension formula in (c) in general. Start by writing down a basis for $U \cap W $ and complete this to a basis of $U$ and $W$, respectively.      
+    \end{mdframed}
+
+The condition for a sub-vetor space is: 
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+
+
+
+
+
+\end{enumerate}
+
+
+
+    \pagebreak
+
+
+\lhead{CP1 Special Relativity}
+\rhead{Problem Sheet 1}
+
+\begin{enumerate}
+    \setcounter{enumi}{0}
+    
+    % --- PROBLEM 1 ---
+    \item \textbf{Lorentz transformations}
+    \begin{mdframed}[style=exercise]
+    The space and time coordinates of two events as measured in a frame S are as follows: Event 1: $ct_1 = x_0,\ x_1 = x_0 ,\ y_1 = 0,\ z_1 = 0$; Event 2: $ct_2 = x_0/2,\ x_2 = 2x_0,\ y_2 = 0,\ z_2 = 0$. Find an inertial frame in which these events occur at the same time. Take the new frame to have spacetime origin that coincides with that of S. What time in the new frame do both events occur?
+    \end{mdframed}
+
+    \[
+    \begin{pmatrix} ct' \\ x' \end{pmatrix} 
+    = \gamma \begin{pmatrix} 1 & -\beta \\ -\beta & 1 \end{pmatrix} \begin{pmatrix} ct \\ x \end{pmatrix}
+    \Rightarrow \quad
+    \begin{cases}
+        ct_1' = \gamma (x_0 - \beta x_0) \\
+        x_1' = \gamma (x_0 - \beta x_0) \\
+        ct_2' = \gamma \left( \dfrac{x_0}{2} - 2\beta x_0 \right) \\
+        x_2' = \gamma \left( 2x_0 - \beta \dfrac{x_0}{2} \right)
+    \end{cases}
+    \]
+    \begin{align*}
+        x_0 - \beta x_0 &= \frac{x_0}{2} - 2\beta x_0 \\
+        1 - \beta &= \frac{1}{2} - 2\beta \\
+        \Aboxed{\beta &= -\frac{1}{2}}   \quad \Rightarrow \quad S' \text{ is moving with } \frac{1}{2}c \text{ in the } x^{-}\text{-direction}\\
+         \gamma & = \frac{1}{\sqrt{1 - \beta^2}} = \frac{1}{\sqrt{1 - \frac{1}{4}}} = \frac{2}{\sqrt{3}}
+    \end{align*}
+    
+    
+    
+    \[
+    ct' = \frac{2}{\sqrt{3}}\left(1 + \frac{1}{2}\right)x_0 = \frac{2}{\sqrt{3}} \cdot \frac{3}{2} x_0 = \sqrt{3}\, x_0    \qquad \boxed{t' = \frac{\sqrt{3}\, x_0}{c}}
+
+    \]
+
+
+    \pagebreak
+    
+    % --- PROBLEM 3 ---
+
+\end{enumerate}
+\end{document}
